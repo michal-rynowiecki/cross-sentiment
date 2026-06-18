@@ -10,11 +10,16 @@ def create_binary_data(in_path: str, out_path: str, inference: bool = False) -> 
             inference = not 'Quadruplet' in temp
 
             if not inference:
+                valid_pairs = {
+                    (quad['Aspect'], quad['Opinion'])
+                    for quad in temp['Quadruplet']
+                }
                 aspects  = {quad['Aspect']  for quad in temp['Quadruplet']}
                 opinions = {quad['Opinion'] for quad in temp['Quadruplet']}
 
                 for aspect in aspects:
                     for opinion in opinions:
+                        flag = int((aspect, opinion) in valid_pairs)
                         data.append({
                             'ID':      temp['ID'],
                             'Text':    temp['Text'],
