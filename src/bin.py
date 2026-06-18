@@ -39,7 +39,8 @@ def train(
     model_path: str,
     test: str = None,
     pretrained_weights: str = None,
-    epochs: int = 3
+    epochs: int = 3,
+    domain: str = "",
 ):
     loss_file  = f"{out_path}/log_files/bin_loss.jsonl"
     preds_file = f"{out_path}/predictions/bin_predictions.jsonl"
@@ -101,7 +102,7 @@ def train(
                 avg_loss = total_loss / len(train_loader)
                 print(f"Epoch {epoch+1}/{epochs} | Average Loss: {avg_loss:.4f}")
 
-        torch.save(model.state_dict(), f"{out_path}/trained_models/bin_model.pt")
+        torch.save(model.state_dict(), f"{out_path}/trained_models/bin_model_{domain}.pt")
 
     # Evaluation
     if test_loader is not None:

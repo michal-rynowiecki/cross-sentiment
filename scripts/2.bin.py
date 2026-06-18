@@ -16,6 +16,7 @@ def parse_args():
     parser.add_argument("--test",                default=None,               help="Path to test file. Triggers evaluation if provided.")
     parser.add_argument("--pretrained-weights",  default=None,               help="Path to saved model weights. Skips training if provided.")
     parser.add_argument("--epochs",              default=3,    type=int)
+    parser.add_argument("--domain",              default="",    type=str)
 
     return parser.parse_args()
 
@@ -30,4 +31,5 @@ if __name__ == "__main__":
         test=args.test,
         pretrained_weights=args.pretrained_weights,
         epochs=args.epochs,
+        domain=args.domain,
     )

@@ -70,6 +70,7 @@ def train(
     test: str = None,      # if provided, evaluate on this file after training
     pretrained_weights: str = None,
     epochs: int = 3,
+    domain: str = "",
 ):
     tag_to_id = {"O": 0, "B-Asp": 1, "I-Asp": 2}
 
@@ -141,7 +142,7 @@ def train(
                 avg_loss = total_loss / len(train_loader)
                 print(f"Epoch {epoch+1}/{epochs} | Average Loss: {avg_loss:.4f}")
         
-        torch.save(module.state_dict(), f"{out_path}/trained_models/asp_op_model.pt")
+        torch.save(module.state_dict(), f"{out_path}/trained_models/asp_op_model_{domain}.pt")
 
 
     # Evaluation

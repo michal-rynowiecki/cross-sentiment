@@ -214,7 +214,7 @@ def train(
                 avg_loss = total_loss / len(train_loader)
                 print(f"Epoch {epoch+1}/{epochs} | Average Loss: {avg_loss:.4f}")
 
-        torch.save(model.state_dict(), f"{out_path}/trained_models/cat_model.pt")
+        torch.save(model.state_dict(), f"{out_path}/trained_models/cat_model_{domain}.pt")
 
     # Evaluation
     if test_loader is not None:
