@@ -27,9 +27,12 @@ A more detailed description of the architecture and experiments can be found in 
 If you use this code or build upon our work, please cite the following paper:
 
 ```bibtex
-@inproceedings{TODO,
-  title     = {TODO},
-  author    = {TODO},
+@inproceedings{encoders2026se,
+  title     = {In Proceed-
+ings of the 20th International Workshop on Semantic
+Evaluation (SemEval-2026), San Diego, California.
+Association for Computational Linguistics.},
+  author    = {Michal Rynowiecki, Rob van der Goot},
   booktitle = {Proceedings of SemEval 2026},
   year      = {2026}
 }
