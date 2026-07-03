@@ -27,14 +27,13 @@ A more detailed description of the architecture and experiments can be found in 
 If you use this code or build upon our work, please cite the following paper:
 
 ```bibtex
-@inproceedings{encoders2026se,
-  title     = {In Proceed-
-ings of the 20th International Workshop on Semantic
-Evaluation (SemEval-2026), San Diego, California.
-Association for Computational Linguistics.},
-  author    = {Michal Rynowiecki, Rob van der Goot},
-  booktitle = {Proceedings of SemEval 2026},
-  year      = {2026}
+@inproceedings{rynowiecki-van-der-goot-2026-bobw,
+  title     = {Team BOBW (Best Of Both Worlds) at SemEval-2026 Task 3: Modular Cross-Attention Encoders for Dimensional Aspect-Based Sentiment Analysis},
+  author    = {Rynowiecki, Michal and Van Der Goot, Rob},
+  booktitle = {Proceedings of the 20th International Workshop on Semantic Evaluation (SemEval-2026)},
+  year      = {2026},
+  address   = {San Diego, California},
+  publisher = {Association for Computational Linguistics}
 }
 ```
 
